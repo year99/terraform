@@ -10,7 +10,7 @@
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no' # Disable strict host key checking
   tasks:
     - name: Wait for SSH to come up # Wait for SSH to be available
-      wait_for: 
+      wait_for:
         host: "{{ inventory_hostname }}" #  Hostname of the target machine
         port: 22 # SSH port
         delay: 60 # Delay between retries
